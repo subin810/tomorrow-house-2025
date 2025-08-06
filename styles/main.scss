@@ -1,4 +1,5 @@
-p {
-    color: blue;
-    display: block;
+@use "./base/fonts";
+
+* {
+  font-family: "Noto sans KR", sans-serif;
 }
