@@ -1,4 +1,6 @@
 @use "./base/fonts";
+@use "./base/nomailize";
+@use "./base/reset";
 
 * {
   font-family: "Noto sans KR", sans-serif;
