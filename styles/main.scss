@@ -3,6 +3,7 @@
 @use "./base/fonts";
 @use "./base/nomailize";
 @use "./base/reset";
+@use "./rayouts/grids";
 
 * {
   font-family: "Noto sans KR", sans-serif;
