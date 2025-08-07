@@ -1,19 +1,22 @@
+@use "../constants/colors";
+@use "../constants/typography";
+
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: $font-main;
+  font-family: typography.$font-main;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 html {
-  font-family: $font-main;
-  font-size: $font-size-16;
+  font-family: typography.$font-main;
+  font-size: typography.$font-size-16;
 }
 
 body {
-  font-family: $font-main;
-  color: $primary;
+  font-family: typography.$font-main;
+  color: colors.$primary;
 }
 
 h1 {
