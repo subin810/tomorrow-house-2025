@@ -1,10 +1,12 @@
 @use "./constants/colors";
 @use "./constants/typography";
+@use "./constants/breakpoints";
 @use "./base/fonts";
 @use "./base/nomailize";
 @use "./base/reset";
 @use "./layouts/grids";
 @use "./mixins/text-styles";
+@use "./mixins/responsive";
 
 * {
   font-family: "Noto sans KR", sans-serif;

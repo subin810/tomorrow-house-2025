@@ -1,0 +1,17 @@
+/* stylelint-disable */
+
+@use "../constants/breakpoints" as b;
+
+@mixin responsive($screen) {
+  @if ($screen == "T") {
+    @media screen and (min-width: b.$md-breakpoint) {
+      @content;
+    }
+  }
+
+  @if ($screen == "D") {
+    @media screen and (min-width: b.$lg-breakpoint) {
+      @content;
+    }
+  }
+}
