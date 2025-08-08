@@ -1,0 +1,64 @@
+/* stylelint-disable */
+@use "../constants/colors" as c;
+@use "../constants/typography" as t;
+
+@mixin text-style-12() {
+  font-size: t.$font-size-12;
+  line-height: t.$line-height-12;
+  letter-spacing: t.$letter-spacing-12;
+}
+
+@mixin text-style-13() {
+  font-size: t.$font-size-13;
+  line-height: t.$line-height-13;
+  letter-spacing: t.$letter-spacing-13;
+}
+
+@mixin text-style-14() {
+  font-size: t.$font-size-14;
+  line-height: t.$line-height-14;
+  letter-spacing: t.$letter-spacing-14;
+}
+
+@mixin text-style-16() {
+  font-size: t.$font-size-16;
+  line-height: t.$line-height-16;
+  letter-spacing: t.$letter-spacing-16;
+}
+
+@mixin text-style-18() {
+  font-size: t.$font-size-18;
+  line-height: t.$line-height-18;
+  letter-spacing: t.$letter-spacing-18;
+}
+
+@mixin text-style-24() {
+  font-size: t.$font-size-24;
+  line-height: t.$line-height-24;
+  letter-spacing: t.$letter-spacing-24;
+}
+
+@mixin text-style($size, $color: flase) {
+  @if ($size == 12) {
+    @include text-style-12;
+  }
+  @if ($size == 13) {
+    @include text-style-13;
+  }
+  @if ($size == 14) {
+    @include text-style-14;
+  }
+  @if ($size == 16) {
+    @include text-style-16;
+  }
+  @if ($size == 18) {
+    @include text-style-18;
+  }
+  @if ($size == 24) {
+    @include text-style-24;
+  }
+
+  @if ($color and type-of($color) == "color") {
+    color: $color;
+  }
+}
