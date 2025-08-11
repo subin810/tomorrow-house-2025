@@ -8,6 +8,7 @@
 @use "./mixins/text-styles";
 @use "./mixins/responsive";
 @use "./mixins/positions";
+@use "./mixins/flexbox";
 
 * {
   font-family: "Noto sans KR", sans-serif;
