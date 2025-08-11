@@ -11,6 +11,7 @@
 @use "./mixins/flexbox";
 @use "./modules/tags";
 @use "./modules/avatar";
+@use "./modules/star-ratings";
 
 * {
   font-family: "Noto sans KR", sans-serif;
