@@ -1,0 +1,80 @@
+@use "../constants/colors" as c;
+@use "../mixins/text-styles" as t;
+@use "../mixins/positions" as p;
+
+%form-base {
+  @include t.text-style(16, c.$primary);
+
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  appearance: none;
+  background-color: c.$white;
+  border: 1px solid c.$border;
+  border-radius: 4px;
+  transition: background-color 200ms ease-in-out;
+
+  &::placeholder {
+    color: c.$tertiary;
+  }
+
+  &:not(:disabled):hover {
+    background-color: c.$background;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+
+/* NOTE: Select */
+.select-group {
+  position: relative;
+
+  &.is-active {
+    .form-select {
+      border-color: c.$blue;
+    }
+
+    .ic-caret {
+      color: c.$blue;
+    }
+  }
+
+  .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis;
+  }
+
+  .ic-caret {
+    @include p.pos-center-y;
+
+    right: 8px;
+    font-size: 24px;
+    color: c.$tertiary;
+    pointer-events: none;
+  }
+}
+
+/* NOTE: Input */
+.input-group {
+  position: relative;
+
+  .ic-search {
+    @include p.pos-center-y;
+
+    left: 10px;
+    font-size: 16px;
+  }
+
+  .form-input {
+    padding-left: 40px;
+  }
+}
