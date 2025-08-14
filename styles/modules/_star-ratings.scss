@@ -1,5 +1,3 @@
-/* stylelint-disable */
-
 @use "../mixins/flexbox" as f;
 @use "../constants/colors" as *;
 
@@ -17,20 +15,24 @@
 
 .star-rating-13 {
   @extend %star-rating-base;
+
   font-size: 13px;
 }
 
 .star-rating-16 {
   @extend %star-rating-base;
+
   font-size: 16px;
 }
 
 .star-rating-20 {
   @extend %star-rating-base;
+
   font-size: 20px;
 }
 
 .star-rating-24 {
   @extend %star-rating-base;
+
   font-size: 24px;
 }

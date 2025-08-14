@@ -1,5 +1,3 @@
-/* stylelint-disable */
-
 @mixin pos-center-x($type: absolute) {
   @if ($type == fixed or $type == absolute) {
     position: $type;
