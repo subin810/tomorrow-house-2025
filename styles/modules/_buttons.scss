@@ -1,0 +1,91 @@
+@use "../constants/colors" as c;
+@use "../mixins/flexbox" as f;
+@use "../mixins/text-styles" as t;
+
+%btn-base {
+  @include f.inline-flexbox;
+
+  padding: 0 8px;
+  font-weight: 700;
+  border-radius: 4px;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+/* NOTE: Button Styles */
+.btn-primary {
+  @extend %btn-base;
+
+  color: c.$white;
+  background-color: c.$blue;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: c.$blue-dark;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-base;
+
+  color: c.$primary;
+  background-color: c.$border;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: c.$tertiary;
+  }
+}
+
+.btn-outlined {
+  @extend %btn-base;
+
+  color: c.$blue;
+  background-color: c.$white;
+  border: 1px solid c.$blue;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: c.$blue-light;
+  }
+}
+
+.btn-ghost {
+  @extend %btn-base;
+
+  color: c.$primary;
+  background-color: c.$white;
+  transition: color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    color: c.$secondary;
+  }
+}
+
+/* NOTE: Button Sizes */
+.btn-32 {
+  @include t.text-style(14);
+
+  height: 32px;
+}
+
+.btn-40 {
+  @include t.text-style(16);
+
+  height: 40px;
+}
+
+.btn-48 {
+  @include t.text-style(16);
+
+  height: 48px;
+}
+
+.btn-55 {
+  @include t.text-style(18);
+
+  height: 55px;
+}
