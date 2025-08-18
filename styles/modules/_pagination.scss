@@ -1,0 +1,84 @@
+@use "../constants/colors" as c;
+@use "../mixins/flexbox" as f;
+@use "../mixins/text-styles" as ts;
+
+%page-item-base {
+  @include f.inline-flexbox;
+  @include ts.text-style(16, c.$primary);
+
+  height: 26px;
+  font-weight: 700;
+  background-color: c.$white;
+  border-radius: 4px;
+}
+
+.pagination {
+  @include f.flexbox;
+
+  .page-control {
+    @extend %page-item-base;
+
+    width: 26px;
+    border: 1px solid c.$border;
+
+    &.page-prev {
+      margin-right: 24px;
+
+      .ic-chevron {
+        transform: rotate(90deg);
+      }
+    }
+
+    &.page-next {
+      margin-left: 24px;
+
+      .ic-chevron {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    ic-chevron {
+      font-size: 20px;
+    }
+  }
+
+  .page-list {
+    @include f.flexbox;
+  }
+
+  .page-item {
+    margin-right: 4px;
+
+    &.is-active {
+      a,
+      button {
+        color: c.$white;
+        background-color: c.$blue;
+
+        &:hover {
+          color: c.$white;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a,
+    button {
+      @extend %page-item-base;
+
+      min-width: 25px;
+      padding: 0 4px;
+
+      &:hover {
+        color: c.$blue;
+      }
+    }
+  }
+}
