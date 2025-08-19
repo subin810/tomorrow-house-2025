@@ -1,0 +1,51 @@
+@use "../constants/colors" as c;
+@use "../mixins/positions" as p;
+@use "../mixins/flexbox" as f;
+
+.gnb {
+  position: relative;
+  border-bottom: 1px solid c.$border;
+
+  &-wrapper {
+    @include f.flexbox(between);
+
+    height: 50px;
+  }
+
+  &-right {
+    .button-group {
+      @include f.flexbox(end);
+    }
+
+    .gnb-search-button {
+      margin-right: 4px;
+    }
+  }
+
+  &-icon-button {
+    @include f.flexbox;
+
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    color: c.$secondary;
+  }
+
+  &-menu-button {
+    color: c.$blue;
+  }
+
+  .logo {
+    @include p.pos-center;
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 20px;
+    }
+  }
+}
