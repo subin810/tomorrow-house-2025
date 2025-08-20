@@ -5,8 +5,6 @@
 @use "./base/nomailize";
 @use "./base/reset";
 @use "./base/globals";
-@use "./layouts/grids";
-@use "./layouts/gnb";
 @use "./mixins/text-styles";
 @use "./mixins/responsive";
 @use "./mixins/positions";
@@ -19,6 +17,9 @@
 @use "./modules/forms";
 @use "./modules/pagination";
 @use "./modules/icons";
+@use "./components/gnb-nav";
+@use "./layouts/grids";
+@use "./layouts/gnb";
 
 * {
   font-family: "Noto sans KR", sans-serif;

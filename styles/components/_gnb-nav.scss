@@ -1,0 +1,23 @@
+@use "../constants/colors" as c;
+@use "../mixins/text-styles" as t;
+@use "../mixins/flexbox" as f;
+
+.gnb-nav {
+  &-list {
+    @include f.flexbox(start);
+  }
+
+  &-item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      @include t.text-style(18, c.$primary);
+
+      font-weight: 700;
+    }
+  }
+}
