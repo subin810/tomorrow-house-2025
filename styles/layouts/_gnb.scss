@@ -2,6 +2,7 @@
 @use "../mixins/positions" as p;
 @use "../mixins/flexbox" as f;
 @use "../mixins/responsive" as r;
+@use "../mixins/text-styles" as t;
 
 .gnb {
   position: relative;
@@ -50,6 +51,24 @@
 
         .gnb-icon-button {
           margin-right: 8px;
+        }
+
+        .gnb-auth {
+          margin-left: 8px;
+
+          a {
+            @include t.text-style(14, c.$secondary);
+
+            font-weight: 700;
+
+            &:first-child {
+              margin-right: 12px;
+            }
+
+            &:hover {
+              color: c.$blue;
+            }
+          }
         }
       }
     }
